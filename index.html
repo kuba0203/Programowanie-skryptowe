@@ -31,6 +31,8 @@
     </header>
 
     <main>
+        <!-- Wiersz: O mnie (lewo) + ramka z linkami (prawo) -->
+        <div class="intro-grid">
         <!-- Sekcja O mnie (US-3) - Pusta zgodnie z życzeniem, gotowa na tekst -->
         <section id="o-mnie">
             <h2>O mnie</h2>
@@ -38,6 +40,17 @@
                 Jestem studentem cyberbezpieczeństwa, interesuje się głównie pentestingiem.
             </div>
         </section>
+
+        <!-- Panel boczny z linkami (US-5) -->
+        <aside id="linki">
+            <h2>Przydatne Linki</h2>
+            <ul>
+                <li><a href="https://github.com/kuba0203" target="_blank" rel="noopener noreferrer">Mój GitHub</a></li>
+                <li><a href="https://gchq.github.io/CyberChef/" target="_blank" rel="noopener noreferrer">CyberChef</a></li>
+                <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener noreferrer">VirusTotal</a></li>
+            </ul>
+        </aside>
+        </div>
 
         <!-- Kafelki projektów (US-4) -->
         <section id="projekty">
@@ -53,11 +66,19 @@
                     <span class="badge">OSINT / Python</span>
                 </article>
                 <article class="card">
+                    <!-- Ikona Wi-Fi obrazująca sieć -->
+                    <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z" />
+                    </svg>
                     <h3>Sieć domowa</h3>
                     <p>Bezpieczna konfiguracja routera.</p>
                     <span class="badge">Sieci</span>
                 </article>
                 <article class="card">
+                    <!-- Ikona nawiasów kodu obrazująca aplikację webową -->
+                    <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                    </svg>
                     <h3>Aplikacja webowa</h3>
                     <p>Zabezpieczone API RESTowe.</p>
                     <span class="badge">Web Dev</span>
@@ -71,15 +92,6 @@
             <div id="calendar-box"></div>
         </section>
 
-        <!-- Panel boczny z linkami (US-5) -->
-        <aside id="linki">
-            <h2>Przydatne Linki</h2>
-            <ul>
-                <li><a href="https://github.com/kuba0203" target="_blank" rel="noopener noreferrer">Mój GitHub</a></li>
-                <li><a href="https://gchq.github.io/CyberChef/" target="_blank" rel="noopener noreferrer">CyberChef</a></li>
-                <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener noreferrer">VirusTotal</a></li>
-            </ul>
-        </aside>
 
         <!-- Semantyczny formularz kontaktowy (US-6) - Pusty w opis, ale zawiera wymagany formularz -->
         <section id="kontakt">
