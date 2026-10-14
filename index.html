@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD - Portfolio</title>
+    <!-- Favicon w formacie SVG zgodnie z wymaganiami -->
+    <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Pasek nawigacyjny (US-1) -->
+    <nav>
+        <a href="#" class="logo">JD</a>
+        <div class="nav-links">
+            <a href="#o-mnie">O mnie</a>
+            <a href="#projekty">Projekty</a>
+            <a href="#linki">Linki</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- Sekcja powitalna (US-2) ze zdjęciem na środku nad imieniem -->
+    <header id="hero">
+        <div class="hero-avatar-container">
+            <img src="assets/zdjecie.jpeg" alt="Zdjęcie profilowe autora" class="profile-img">
+        </div>
+        <h1>Jakub Duliban</h1>
+        <p class="subtitle">Student Cyberbezpieczeństwa</p>
+    </header>
+
+    <main>
+        <!-- Sekcja O mnie (US-3) - Pusta zgodnie z życzeniem, gotowa na tekst -->
+        <section id="o-mnie">
+            <h2>O mnie</h2>
+            <div class="about-content">
+                Jestem studentem cyberbezpieczeństwa, interesuje się głównie pentestingiem.
+            </div>
+        </section>
+
+        <!-- Kafelki projektów (US-4) -->
+        <section id="projekty">
+            <h2>Moje Projekty</h2>
+            <div class="grid-container">
+                <article class="card">
+                    <!-- Ikona wykresu obrazująca śledzenie rynku i giełdę -->
+                    <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.307a11.95 11.95 0 0 1 5.814-5.519l2.74-1.22m0 0-5.94-2.28m5.94 2.28-2.28 5.941" />
+                    </svg>
+                    <h3>Tracker Portfeli Polityków</h3>
+                    <p>Bot monitorujący i analizujący transakcje giełdowe polityków z USA.</p>
+                    <span class="badge">OSINT / Python</span>
+                </article>
+                <article class="card">
+                    <h3>Sieć domowa</h3>
+                    <p>Bezpieczna konfiguracja routera.</p>
+                    <span class="badge">Sieci</span>
+                </article>
+                <article class="card">
+                    <h3>Aplikacja webowa</h3>
+                    <p>Zabezpieczone API RESTowe.</p>
+                    <span class="badge">Web Dev</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sloty integracyjne na skrypty JS z Lab 02 (US-7) -->
+        <section id="widgets">
+            <div id="weather-box"></div>
+            <div id="calendar-box"></div>
+        </section>
+
+        <!-- Panel boczny z linkami (US-5) -->
+        <aside id="linki">
+            <h2>Przydatne Linki</h2>
+            <ul>
+                <li><a href="https://github.com/kuba0203" target="_blank" rel="noopener noreferrer">Mój GitHub</a></li>
+                <li><a href="https://gchq.github.io/CyberChef/" target="_blank" rel="noopener noreferrer">CyberChef</a></li>
+                <li><a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener noreferrer">VirusTotal</a></li>
+            </ul>
+        </aside>
+
+        <!-- Semantyczny formularz kontaktowy (US-6) - Pusty w opis, ale zawiera wymagany formularz -->
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Imię i nazwisko:</label>
+                    <input type="text" id="name" name="name" placeholder="John Pork" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Adres e-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Wiadomość (min. 10 znaków):</label>
+                    <textarea id="message" name="message" placeholder="Twoja wiadomość..." minlength="10" required></textarea>
+                </div>
+
+                <button type="submit">Wyślij</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 JD. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+</html>
