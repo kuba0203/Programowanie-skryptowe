@@ -1,15 +1,13 @@
-/* Definicja Design Tokens */
 :root {
-    --bg-color: #faf9f6; /* Kolor Off-white */
+    --bg-color: #faf9f6;
     --text-color: #1a1a1a;
     --primary-color: #000000;
     --card-bg: #ffffff;
     --border-color: #e0e0e0;
-    --focus-ring: #005fcc;
+    --focus-ring: #000000;
     --transition-speed: 0.3s;
 }
 
-/* Reset i podstawowe ustawienia */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,13 +21,12 @@ body {
     line-height: 1.6;
 }
 
-/* Dostępność (A11y) - Focus dla nawigacji klawiaturą */
 :focus-visible {
     outline: 3px solid var(--focus-ring);
     outline-offset: 3px;
 }
 
-/* US-1: Pasek nawigacyjny */
+/*Pasek nawigacyjny*/
 nav {
     position: sticky;
     top: 0;
@@ -64,9 +61,8 @@ nav {
     text-decoration: underline;
 }
 
-/* Main i marginesy sekcji */
 main {
-    max-width: 1000px; /* Nieco węższy kontener główny dla lepszego wyglądu przy wyśrodkowaniu */
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -76,7 +72,7 @@ section, aside {
     scroll-margin-top: 5rem;
 }
 
-/* US-2: Sekcja Hero (Płynne skalowanie i wyśrodkowanie) + Nowe małe zdjęcie na środku */
+/*Sekcja Hero*/
 #hero {
     display: flex;
     flex-direction: column;
@@ -85,13 +81,13 @@ section, aside {
     padding: 4rem 1rem 2rem 1rem;
 }
 
-.hero-avatar-container {
+.hero-photo {
     margin-bottom: 1.5rem;
 }
 
 .profile-img {
-    width: 200px;          /* Małe, zgrabne zdjęcie */
-    max-width: 100%;       /* Responsywność względem kontenera */
+    width: 200px;
+    max-width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -112,19 +108,19 @@ section, aside {
     font-weight: 500;
 }
 
-/* US-3: O mnie (Prosta, pusta sekcja) */
+/*O mnie*/
 #o-mnie {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.about-content {
+.about-text {
     margin-top: 1rem;
     font-size: 1.1rem;
 }
 
-/* US-4: Projekty (Kafelki - CSS Grid) */
+/*Projekty*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -137,7 +133,7 @@ section, aside {
     border: 2px solid var(--primary-color);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 6px 6px 0 var(--primary-color);
+    box-shadow: 6px 6px 2px var(--primary-color);
     transition: transform var(--transition-speed);
 }
 
@@ -162,7 +158,6 @@ section, aside {
     font-size: 0.8rem;
 }
 
-/* Układ: O mnie + panel linków obok siebie */
 .intro-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -181,13 +176,18 @@ section, aside {
     margin-right: 0;
 }
 
-/* US-5: Panel boczny z odnośnikami (wyeksponowana ramka) */
+/*Panel z linkami*/
 #linki {
     background-color: var(--card-bg);
     border: 2px solid var(--primary-color);
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 6px 6px 0 var(--primary-color);
+    box-shadow: 6px 6px 2px var(--primary-color);
+    transition: transform var(--transition-speed);
+}
+
+#linki:hover {
+    transform: translateY(-5px);
 }
 
 #linki ul {
@@ -211,7 +211,7 @@ section, aside {
     text-decoration: underline;
 }
 
-/* US-6: Formularz kontaktowy */
+/*Formularz kontaktowy*/
 form {
     display: flex;
     flex-direction: column;
@@ -227,6 +227,12 @@ form {
 }
 
 input, textarea {
+    input:focus,
+    textarea:focus {
+        border-color: var(--focus-ring);
+        outline: 3px solid var(--focus-ring);
+        outline-offset: 1px;
+    }
     padding: 0.8rem;
     border: 1px solid var(--border-color);
     border-radius: 4px;
@@ -262,7 +268,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* RWD - Zgodnie z wymaganiami sekcja umieszczona na końcu pliku */
 @media (max-width: 768px) {
     .intro-grid {
         grid-template-columns: 1fr;
